@@ -1,13 +1,15 @@
 """
- Implementation of Bubble sort algorithm
+ Bubble sort algorithm:
+   iterates over the list comparing each pair and swapping elements
+   if out of order. Keeps iterations until no sorts are done
 """
 
 
 def bubble_sort(lst):
     """
-    Bubble sort: sorts a list
-    O(n²)
-    :param lst: list of elements
+    Sorts a list
+    Complexity: O(n²)
+    :param lst:
     :return: sorted list
     """
     def swap(a, b):
