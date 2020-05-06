@@ -1,7 +1,8 @@
 """
  Selection sort algorithm:
-   in each iteration over the list finds the minimum element and substitutes
-   for the first non sorted position. Ex: 1st iteration puts min in list[0}
+   in each iteration over the list finds the minimum element and puts it in
+   the first non sorted position.
+   ex: 1st iteration puts min element in list[0]
 """
 
 

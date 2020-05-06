@@ -1,7 +1,7 @@
 """
  Bubble sort algorithm:
    iterates over the list comparing each pair and swapping elements
-   if out of order. Keeps iterations until no sorts are done
+   if out of order. Keeps iterations until no more swaps are done
 """
 
 
