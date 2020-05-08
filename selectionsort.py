@@ -19,11 +19,11 @@ def selection_sort(lst):
 
     # returns index of the minimum element in the list (from low to high-1)
     def index_min(low, high):
-        i_min = low
+        idx = low
         for i in range(low, high):
-            if lst[i] < lst[i_min]:
-                i_min = i
-        return i_min
+            if lst[i] < lst[idx]:
+                idx = i
+        return idx
 
     size = len(lst)
 
