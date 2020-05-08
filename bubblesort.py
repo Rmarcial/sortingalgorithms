@@ -3,6 +3,8 @@
    iterates over the list comparing each pair and swapping elements
    if out of order. Keeps iterations until no more swaps are done
 """
+import random
+import time
 
 
 def bubble_sort(lst):
@@ -12,6 +14,7 @@ def bubble_sort(lst):
     :param lst:
     :return: sorted list
     """
+
     def swap(a, b):
         lst[a], lst[b] = lst[b], lst[a]
 
@@ -32,12 +35,17 @@ def bubble_sort(lst):
 
 
 # Tests
+print()
 
-l1 = []
-l2 = [3]
-l3 = [1, -22, 3.8, 1.6]
-l4 = [2, 3, 1]
-l5 = [6, 5]
+list_size = 1000
+max_rand = 500
+numbers = []
 
-print(bubble_sort(l3))
+for n in range(list_size):
+    numbers.append(random.randint(0, max_rand))
 
+start = time.clock()
+bubble_sort(numbers)
+stop = time.clock()
+
+print("bubble sort:", stop - start, "seg")

@@ -4,6 +4,9 @@
   sorted sublists in order
 """
 
+import random
+import time
+
 
 def merge_sort(lst):
     """
@@ -12,6 +15,7 @@ def merge_sort(lst):
     :param lst:
     :return: sorted list
     """
+
     size = len(lst)
 
     if size <= 1:
@@ -39,16 +43,18 @@ def merge(lst_a, lst_b):
 
 
 # Tests
+print()
 
-l1 = []
-l2 = [3]
-l3 = [1, -22, 3.8, 1.6]
-l4 = [2, 3, 1]
-l5 = [6, 5]
+list_size = 1000
+max_rand = 500
+numbers = []
 
-print(merge_sort(l1))
-print(merge_sort(l2))
-print(merge_sort(l3))
-print(merge_sort(l4))
-print(merge_sort(l5))
+for n in range(list_size):
+    numbers.append(random.randint(0, max_rand))
+
+start = time.clock()
+merge_sort(numbers)
+stop = time.clock()
+
+print("merge sort:", stop - start, "seg")
 

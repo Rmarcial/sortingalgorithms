@@ -5,6 +5,9 @@
    ex: 1st iteration puts min element in list[0]
 """
 
+import random
+import time
+
 
 def selection_sort(lst):
     """
@@ -34,15 +37,18 @@ def selection_sort(lst):
 
 
 # Tests
+print()
 
-l1 = []
-l2 = [3]
-l3 = [1, -22, 3.8, 1.6]
-l4 = [2, 3, 1]
-l5 = [6, 5]
+list_size = 1000
+max_rand = 500
+numbers = []
 
-print(selection_sort(l1))
-print(selection_sort(l2))
-print(selection_sort(l3))
-print(selection_sort(l4))
-print(selection_sort(l5))
+for n in range(list_size):
+    numbers.append(random.randint(0, max_rand))
+
+start = time.clock()
+selection_sort(numbers)
+stop = time.clock()
+
+print("selection sort:", stop - start, "seg")
+
